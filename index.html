@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	function computerPlay() {
+  		let choice = random(2)
+
+  		if(choice == 0) {
+  	 		return 'Rock';
+  		} 
+  		else if (choice == 1) {
+  			return 'Paper';
+  		}
+  		else {
+  			return 'Scissors';
+  		}
+  	}
+
+  	// function playRound(playerSelection, computerSelection) {
+  	// 	playerSelection = playerSelection.toLowerCase();
+
+  	// 	switch
+  	// }
+
+  	function random(number) {
+  		return Math.floor(Math.random() * number);
+  	}
+  </script>
+</body>
+</html>
