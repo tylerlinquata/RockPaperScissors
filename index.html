@@ -4,96 +4,11 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <script type="text/javascript">
-  	function computerPlay() {
-  		let choice = random(3)
-
-  		if(choice == 0) {
-  	 		return 'Rock';
-  		} 
-  		else if (choice == 1) {
-  			return 'Paper';
-  		}
-  		else if (choice == 2) {
-  			return 'Scissors';
-  		}
-  	}
-
-  	function playRound(playerSelection, computerSelection) {
-  		playerSelection = playerSelection.toLowerCase();
-
-  		if(playerSelection == 'rock') {
-  			if(computerSelection == 'Rock') {
-  				return 'It\'s a tie!';
-  			}
-  			else if(computerSelection == 'Paper') {
-  				return 'You lose! Paper beats Rock.';
-  			}
-  			else {
-  				return 'You win! Rock beats Scissors';
-  			}
-  		}
-
-  		if(playerSelection == 'paper') {
-  			if(computerSelection == 'Rock') {
-  				return 'You win! Paper beats Rock.';
-  			}
-  			else if(computerSelection == 'Paper') {
-  				return 'It\'s a tie!';
-  			}
-  			else {
-  				return 'You lose! Scissors beats Paper';
-  			}
-  		}
-
-  		if(playerSelection == 'scissors') {
-  			if(computerSelection == 'Rock') {
-  				return 'You lose! Rock beats Scissors.';
-  			}
-  			else if(computerSelection == 'Paper') {
-  				return 'You win! Scissors beat Paper';
-  			}
-  			else {
-  				return 'It\'s a tie!';
-  			}
-  		}
-  	}
-
-  	function game() {
-  		let playerScore = 0;
-  		let computerScore = 0;
-
-  		for (var i = 0; i < 5; i++) {
-
-  			let playerSelection = prompt("Choose one: Rock, Paper, or Scissors");
-
-  			let result = playRound(playerSelection, computerPlay());
-
-  			if(result.includes('win')) {
-  				playerScore++;
-  			}
-  			else if (result.includes('lose')) {
-  				computerScore++;
-  			}
-
-  			console.log('The score is: player ' + playerScore + ' - computer ' + computerScore);
-  		}
-
-  		if(playerScore > computerScore) {
-  			console.log('You win! The final score is ' + playerScore + ' - ' + computerScore);
-  		} else if (computerScore > playerScore) {
-  			console.log('You lose! The final score is ' + computerScore + ' - ' + playerScore);
-  		} else {
-  			console.log('It\'s a tie!');
-  		}
-  	}
-
-  	//returns a random number between 0 and the given number
-  	function random(number) {
-  		return Math.floor(Math.random() * number);
-  	}
-
-  	game();
+  <button id="rock">Rock</button>
+  <button id="paper">Paper</button>
+  <button id="scissors">Scissors</button>
+  <div id="result"></div>
+  <script type="text/javascript" src="rock-paper-scissors.js">
   </script>
 </body>
 </html>
